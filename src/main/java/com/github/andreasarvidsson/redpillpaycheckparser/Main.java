@@ -46,8 +46,6 @@ public class Main {
     }
 
     private static void listYear(final int year, final List<Salary> salaries) {
-        System.out.printf("År %d\n", year);
-        System.out.printf("Antal månader %d\n", salaries.size());
         double sumSalary = 0;
         double sumProvision = 0;
         double sumBrutto = 0;
@@ -58,10 +56,12 @@ public class Main {
             sumBrutto += salary.brutto;
             sumNetto += salary.netto;
         }
-        System.out.printf("Medel månadslön %d\n", Math.round(sumSalary / salaries.size()));
-        System.out.printf("Medel provision %d\n", Math.round(sumProvision / salaries.size()));
-        System.out.printf("Medel brutto %d\n", Math.round(sumBrutto / salaries.size()));
-        System.out.printf("Medel netto %d\n", Math.round(sumNetto / salaries.size()));
+        System.out.printf("År\t\t%d\n", year);
+        System.out.printf("Antal månader\t%d\n", salaries.size());
+        System.out.printf("Medel månadslön\t%d\n", Math.round(sumSalary / salaries.size()));
+        System.out.printf("Medel provision\t%d\n", Math.round(sumProvision / salaries.size()));
+        System.out.printf("Medel brutto\t%d\n", Math.round(sumBrutto / salaries.size()));
+        System.out.printf("Medel netto\t%d\n", Math.round(sumNetto / salaries.size()));
         System.out.printf("\n");
     }
 
